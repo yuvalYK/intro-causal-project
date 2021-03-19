@@ -118,7 +118,7 @@ for i in tqdm(range(1)):
 y_hat_1 = net_1(x_1)
 y_hat_2 = net_2(x_1)
 
-print(torch.mean(y_hat_1- y_hat_2)) ## 54
+print(torch.mean(y_hat_1- y_hat_2))
 
 similarity_metrix = torch.cdist(x_1, x_2)
 
@@ -128,4 +128,4 @@ for i in range(y_match.shape[1]):
     argmin = torch.argmin(similarity_metrix[i])
     y_match = y_1[i] - y_2[argmin]
 
-print(torch.mean(y_match)) ## 280
+print(torch.mean(y_match))
